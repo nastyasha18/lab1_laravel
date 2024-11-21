@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/next', function () {
+    return 'hik';
+});
+
 Route::group(['prefix' => 'info'], function() {
     Route::get('/server', [UserController::class, 'getPhpInfo']);
     Route::get('/client', [UserController::class, 'getClientInfo']);
