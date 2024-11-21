@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/next', function () {
-    return 'hik';
-});
+
 
 Route::group(['prefix' => 'info'], function() {
-    Route::get('/server', [UserController::class, 'getPhpInfo']);
-    Route::get('/client', [UserController::class, 'getClientInfo']);
-    Route::get('/database', [UserController::class, 'getDatabaseInfo']);
+    Route::get('/server', [IndexController::class, 'getPhpInfo']);
+    Route::get('/client', [IndeController::class, 'getClientInfo']);
+    Route::get('/database', [IndexController::class, 'getDatabaseInfo']);
 });
