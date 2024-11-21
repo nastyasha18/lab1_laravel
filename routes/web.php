@@ -22,6 +22,6 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'info'], function() {
     Route::get('/server', [IndexController::class, 'getPhpInfo']);
-    Route::get('/client', [IndeController::class, 'getClientInfo']);
+    Route::get('/client', [IndexController::class, 'getClientInfo']);
     Route::get('/database', [IndexController::class, 'getDatabaseInfo']);
 });
